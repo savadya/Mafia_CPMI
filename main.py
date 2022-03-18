@@ -19,10 +19,10 @@ async def start(message):
             number_of_players = int(message.text)
         except Exception:
             print(f'Incorrect response, the user\'s response: "{message.text}"')
+            await message.answer("Введи число")
+            return
         else:
             print('Сorrect user response')
-                
-    message.answer("Отлично")
 
 if __name__ == '__main__':
     executor.start_polling(dp)
